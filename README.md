@@ -8,32 +8,31 @@ Live demo its not available at the moment
 
 ## Previews
 > home preview
-![home preview][img1]
-[img1]: readme_images/home-preview-1.png
+![home preview](readme_images/home-preview-1.png)
 >
 > home preview 2
-![home preview 2](public/assets/previews/home-preview-2.png)
+![home preview 2](readme_images/home-preview-2.png)
 >
 > home preview small
-![home preview small](public/assets/previews/home-small-preview.png)
+![home preview small](readme_images/home-small-preview.png)
 >
 > articles preview
-![articles preview](public/assets/previews/articles-preview-1.png)
+![articles preview](readme_images/articles-preview-1.png)
 >
 > articles small preview
-![articles small preview](public/assets/previews/articles-small-preview.png)
+![articles small preview](readme_images/articles-small-preview.png)
 >
 > articles view preview
-![articles view preview](public/assets/previews/articles-view-preview.png)
+![articles view preview](readme_images/articles-view-preview.png)
 >
 > articles small view preview
-![articles small view preview](public/assets/previews/articles-view-small-preview.png)
+![articles small view preview](readme_images/articles-view-small-preview.png)
 >
 > contact preview
-![contact preview](public/assets/previews/contact-preview.png)
+![contact preview](readme_images/contact-preview.png)
 >
 > contact small preview
-![contact small preview](public/assets/previews/contact-small-preview.png)
+![contact small preview](readme_images/contact-small-preview.png)
 >
 
 ## The project
