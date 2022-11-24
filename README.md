@@ -8,7 +8,8 @@ Live demo its not available at the moment
 
 ## Previews
 > home preview
-![home preview](public/assets/previews/home-preview-1.png)
+![home preview][img1]
+[img1]: readme_images/home-preview-1.png
 >
 > home preview 2
 ![home preview 2](public/assets/previews/home-preview-2.png)
