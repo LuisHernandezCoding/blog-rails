@@ -1,1 +1,42 @@
-<h1>Hola mundo!</h1>
+<section id="content">
+  <section id="hero" class="home"></section>
+  <section id="container">
+    <div class="hero-text">
+      <div class="title">Blog on Rails</div>
+      <div class="subtitle">A Ruby on Rails Blog</div>
+    </div>
+    <button id="article-button">Read More</button>
+  </section>
+</section>
+<section id="posts">
+  <div class="title">Last created</div>
+  <div id="articles">
+    <% @articles.order(created_at: :desc).limit(4).each do |article| %>
+      <a href="<%= article_path(article) %>">
+        <div id="article">
+          <div class="title"><%= article.title %></div>
+          <div class="subtitle"><%= article.subtitle %></div>
+          <div class="body"><%= article.body %></div>
+          <div class="date">Created: <%= article.created_at.strftime("%d/%m/%Y") %></div>
+          <div class="hour"><%= article.created_at.strftime("%H:%M") %></div>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</section>
+<section id="posts">
+  <div class="title">Last updated</div>
+  <div id="articles">
+    <% @articles.order(updated_at: :desc).last(4).each do |article| %>
+      <a href="<%= article_path(article) %>">
+        <div id="article">
+          <div class="title"><%= article.title %></div>
+          <div class="subtitle"><%= article.subtitle %></div>
+          <div class="body"><%= article.body %></div>
+          <div class="date">Updated: <%= article.updated_at.strftime("%d/%m/%Y") %></div>
+          <div class="hour"><%= article.updated_at.strftime("%H:%M") %></div>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</section>

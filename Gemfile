@@ -71,4 +71,8 @@ group :test do
   gem 'webdrivers'
 end
 
+# Use rubocop to lint code 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+# Use font-awesome for icons
+gem "font-awesome-sass", "~> 6.2.1"
