@@ -22,6 +22,7 @@
 </section>
 <% if @article.comments.any? && @article.comments.first.persisted? %>
 <section>
+  <div class="notice"><%= notice %></div>
   <div class="title">Comments</div>
   <div class="subtitle">Check out all our comments</div>
   <%= render @article.comments.order(created_at: :desc) %>

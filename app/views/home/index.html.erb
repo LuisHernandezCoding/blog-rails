@@ -40,3 +40,17 @@
     <% end %>
   </div>
 </section>
+<section id="posts">
+  <div class="title">Most commented</div>
+  <div id="articles">
+    <a href="<%= article_path(@articles.order(comments_count: :desc).first) %>">
+      <div id="article">
+        <div class="title"><%= @articles.order(comments_count: :desc).first.title %></div>
+        <div class="subtitle"><%= @articles.order(comments_count: :desc).first.subtitle %></div>
+        <div class="body"><%= @articles.order(comments_count: :desc).first.body %></div>
+        <div class="date">Comments:</div>
+        <div class="hour"><%= @articles.order(comments_count: :desc).first.comments.count %></div>
+      </div>
+    </a>
+  </div>
+</section>
