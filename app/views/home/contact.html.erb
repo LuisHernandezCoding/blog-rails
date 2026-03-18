@@ -1,0 +1,63 @@
+<section id="content">
+  <section id="hero" class="contact"></section>
+  <section id="container">
+    <div class="title">Get in touch!</div>
+    <p>Contact us for any questions or concerns.</p>
+    <div class="buttons">
+      <a href="#">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="text">Locate</div>
+      </a>
+      <a href="#">
+        <i class="fa-solid fa-phone"></i>
+        <div class="text">Call</div>
+      </a>
+      <a href="#" class="active">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="text">Mail</div>
+      </a>
+    </div>
+    <form id="form-container">
+      <div class="title">Send us a message</div>
+      <div class="contact-fields fields">
+        <div class="field-container" id="name">
+          <div class="label">Your Name</div>
+          <div class="input-area">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Enter your name" maxlength="27">
+          </div>
+        </div>
+        <div class="field-container" id="email">
+          <div class="label">Mail</div>
+          <div class="input-area">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="text" placeholder="Enter your email" maxlength="27">
+          </div>
+        </div>
+        <div class="field-container" id="phone">
+          <div class="label">Phone</div>
+          <div class="input-area">
+            <i class="fa-solid fa-phone"></i>
+            <input type="text" placeholder="Enter your phone number" maxlength="14">
+          </div>
+        </div>
+        <div class="field-container" id="msg">
+          <div class="label">Message</div>
+          <div class="input-area">
+            <i class="fa-solid fa-comment"></i>
+            <textarea placeholder="Enter your messages" name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' maxlength="300"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="classification">
+        <button class="active">Web Design</button>
+        <button>Web Development</button>
+        <button>Logo Design</button>
+        <button>Other</button>
+      </div>
+      <div class="submit">
+        <button>Send Message</button>
+      </div>
+    </form>
+  </section>
+</section>

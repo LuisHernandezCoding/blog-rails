@@ -1,14 +1,25 @@
-<h1 class="title">Articles</h1>
-
-<div>
-  <% @articles.each do |article| %>
-    <a href="<%= article_path(article) %>">
-      <div id="article">
-        <h4><%= article.title %></h4>
-        <p><%= article.subtitle %></p>
-        <p><%= article.body %></p>
-      </div>
-    </a>
-  <% end %>
-</div>
-<div><%= link_to "New Article", new_article_path %></div>
+<section id="content">
+  <section id="hero" class="chat"></section>
+  <section id="container">
+    <div class="hero-text">
+      <div class="title">Articles</div>
+      <div class="subtitle">Check out all our articles</div>
+    </div>
+  </section>
+</section>
+<%= link_to "New Article", new_article_path %>
+<section id="posts">
+  <div id="articles">
+    <% @articles.order(created_at: :desc).each do |article| %>
+      <a href="<%= article_path(article) %>">
+        <div id="article">
+          <div class="title"><%= article.title %></div>
+          <div class="subtitle"><%= article.subtitle %></div>
+          <div class="body"><%= article.body %></div>
+          <div class="date">Created: <%= article.created_at.strftime("%d/%m/%Y") %></div>
+          <div class="hour"><%= article.created_at.strftime("%H:%M") %></div>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</section>

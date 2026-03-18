@@ -1,29 +1,38 @@
-<%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+<%= form_with model: article, id: "form-container" do |form| %>
+  <div class="fields new-article-fields">
+    <div class="field-container" id="title">
+      <div class="label"><%= form.label :title %></div>
+      <div class="input-area">
+        <i class="fa-solid fa-user"></i>
+        <%= form.text_field :title, placeholder: "Enter Your Name", maxlength: 20 %>
+      </div>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div class="error"><%= message %></div>
+      <% end %>
+    </div>
+    <div class="field-container" id="subtitle">
+      <div class="label"><%= form.label :subtitle %></div>
+      <div class="input-area">
+        <i class="fa-solid fa-envelope"></i>
+        <%= form.text_field :subtitle, placeholder: "Enter the Title", maxlength: 30 %>
+      </div>
+      <% article.errors.full_messages_for(:subtitle).each do |message| %>
+        <div class="error"><%= message %></div>
+      <% end %>
+    </div>
+    <div class="field-container" id="body">
+      <div class="label"><%= form.label :body %></div>
+      <div class="input-area">
+        <i class="fa-solid fa-comment"></i>
+        <%= form.text_area :body, placeholder: "Enter the body", oninput: 'this.style.height = "";this.style.height = this.scrollHeight + "px"', maxlength: 300 %>
+      </div>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div class="error"><%= message %></div>
+      <% end %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :subtitle %><br>
-    <%= form.text_field :subtitle %>
-    <% article.errors.full_messages_for(:subtitle).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
+  <div class="submit">
     <%= form.submit %>
   </div>
 <% end %>

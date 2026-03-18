@@ -1,9 +1,9 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+<% unless !comment.persisted? %>
+  <div id="comment">
+    <div class="commenter"> <%= comment.commenter %> </div>
+    <div class="triangle"></div>
+    <div class="comment"> <%= comment.body %> </div>
+    <div class="date"> <%= comment.created_at.try(:strftime, "%d/%m/%Y") %> </div>
+    <div class="hour"> <%= comment.created_at.try(:strftime, "%H:%M") %> </div>
+  </div>
+<% end %>

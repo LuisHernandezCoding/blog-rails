@@ -1,13 +1,28 @@
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
+<%= form_with model: [ @article, @article.comments.build ], id: "form-container" do |form| %>
+  <div class="fields new-article-fields">
+    <div class="field-container" id="commenter">
+      <div class="label"><%= form.label :commenter %></div>
+      <div class="input-area">
+        <i class="fa-solid fa-user"></i>
+        <%= form.text_field :commenter, placeholder: "Enter your name", maxlength: 20 %>
+      </div>
+      <% @article.errors.full_messages_for(:commenter).each do |message| %>
+        <div class="error"><%= message %></div>
+      <% end %>
+    </div>
+    <div class="field-container" id="body">
+      <div class="label"><%= form.label :body %></div>
+      <div class="input-area">
+        <i class="fa-solid fa-comment"></i>
+        <%= form.text_area :body, placeholder: "Enter the body", oninput: 'this.style.height = "";this.style.height = this.scrollHeight + "px"', maxlength: 300 %>
+      </div>
+      <% @article.errors.full_messages_for(:body).each do |message| %>
+        <div class="error"><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="submit">
     <%= form.submit %>
-  </p>
+  </div>
 <% end %>
